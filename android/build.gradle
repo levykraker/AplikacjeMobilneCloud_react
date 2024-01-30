@@ -10,12 +10,22 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        jcenter {
+        url "http://jcenter.bintray.com/"},
+        maven { url 'http://repo1.maven.org/maven2' }
     }
     dependencies {
         classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
     }
+}
+allprojects {
+repositories {
+    jcenter {
+        url "http://jcenter.bintray.com/"
+    }
+  }
 }
 
 apply plugin: "com.facebook.react.rootproject"
